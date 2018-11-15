@@ -16,4 +16,12 @@ public class Car {
         this.paintColor = newColor;
     }
 
+    public void speedingUp(double speed) {
+        speed += 100;
+    }
+
+    public double speedingUp2(double speed) {
+        return speed += 100;
+    }
+
 }
