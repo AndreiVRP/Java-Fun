@@ -1,15 +1,18 @@
 import java.awt.*;
 import java.util.Scanner;
 import java.util.Arrays;
+import static java.lang.System.out;
 
-import static java.util.Arrays.sort;
+
 
 public class Main {
     public static void main(String[] args) {
 
+        //tried import static
+        out.println("HI THERE");
+
         //Hello, World!
         System.out.println("Hello, World!");
-
         //Section 3 - Java Basics
         //working with classes and their instances
         Car newCar = new Car(15.5, "2375AA-1", Color.WHITE, true);
