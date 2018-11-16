@@ -1,15 +1,19 @@
 import java.awt.*;
 import java.util.Scanner;
 import java.util.Arrays;
+import static java.lang.System.out;
 
-import static java.util.Arrays.sort;
+
 
 public class Main {
     public static void main(String[] args) {
 
+        //tried import static
+        out.println("HI THERE");
+
         //Hello, World!
         System.out.println("Hello, World!");
-
+        //Section 3 - Java Basics
         //working with classes and their instances
         Car newCar = new Car(15.5, "2375AA-1", Color.WHITE, true);
         System.out.println("The new car's license number is " + newCar.licensePlate);
@@ -62,8 +66,53 @@ public class Main {
         newCarSpeed = newCar.speedingUp2(50.5);
         System.out.println(newCarSpeed);
 
-        //Section 3 - challenge
+        //Section 3 - Challenge
         Dog myDog = new Dog("Rex", "Labrador Retriever", 5);
         myDog.bark();
+
+        //Section 4 - Control Flow
+
+        //if statement
+        String day = new String("Saturday");
+        System.out.println(day);
+
+        //for strings use equals() instead of ==
+        if (day.equals("Saturday") || day.equals("Sunday")) {
+            System.out.println("It's time to relax!");
+        } else if (day.equals("Monday") || day.equals("Tuesday") || day.equals("Wednesday") || day.equals("Thursday") || day.equals("Friday")){
+            System.out.println("Chances are, it's a working day and you have some tasks to accomplish...");
+        } else {
+            System.out.println("You've probably made a typo! Please, correct it!");
+        }
+        //There is a better option -> combining enums with switch and encapsulating it into a function (maybe even returning a string value)
+
+        //loops
+        //WHILE LOOP
+        //never executed if the condition is false right off the bat
+        int x = 10;
+        while (x > 0) {
+            System.out.println(x);
+            x -= 1;
+        }
+        System.out.println("WHILE: Go!");
+
+        //DO WHILE LOOP
+        //executed at least once because the condition is checked at the end...
+        x = 10;
+        do {
+            System.out.println(x);
+            x -= 1;
+        } while (x > 0); //...that's why it should be changed to x > 1 for a countdown
+        System.out.println("DO WHILE: Go!");
+
+        //FOR LOOP
+        x = 10;
+        for (int i = x; i > 0; i--) {
+            System.out.println(i);
+        }
+        System.out.println("FOR: Go!");
+
     }
+
+
 }
